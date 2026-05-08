@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Drawing App</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    .toolbar {
+      margin-bottom: 15px;
+    }
+
+    button, input {
+      padding: 8px 12px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    canvas {
+      border: 2px solid black;
+      background-color: white;
+      cursor: crosshair;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Interactive Drawing Application</h1>
+
+  <div class="toolbar">
+    <label>Select Brush Color:</label>
+    <input type="color" id="colorPicker" value="#000000">
+
+    <button onclick="clearCanvas()">Clear Screen</button>
+  </div>
+
+  <canvas id="drawingCanvas" width="800" height="500"></canvas>
+
+  <script>
+    // Get canvas and context
+    const canvas = document.getElementById("drawingCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Variables
+    let drawing = false;
+    let brushColor = "#000000";
+
+    // Change brush color
+    document.getElementById("colorPicker").addEventListener("input", function () {
+      brushColor = this.value;
+    });
+
+    // Start drawing
+    canvas.addEventListener("mousedown", (e) => {
+      drawing = true;
+      draw(e);
+    });
+
+    // Draw on canvas
+    canvas.addEventListener("mousemove", draw);
+
+    // Stop drawing
+    canvas.addEventListener("mouseup", () => {
+      drawing = false;
+      ctx.beginPath();
+    });
+
+    // Stop drawing if mouse leaves canvas
+    canvas.addEventListener("mouseleave", () => {
+      drawing = false;
+      ctx.beginPath();
+    });
+
+    // Drawing function
+    function draw(e) {
+      if (!drawing) return;
+
+      ctx.lineWidth = 3;
+      ctx.lineCap = "round";
+      ctx.strokeStyle = brushColor;
+
+      const rect = canvas.getBoundingClientRect();
+
+      ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
+    }
+
+    // Clear canvas
+    function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  </script>
+
+</body>
+</html>
