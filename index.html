@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Drawing App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Interactive Drawing Application</h1>
+
+    <div class="toolbar">
+        <label>Select Brush Color:</label>
+        <input type="color" id="colorPicker" value="#000000">
+
+        <button onclick="clearCanvas()">Clear Screen</button>
+    </div>
+
+    <canvas id="drawingCanvas" width="800" height="500"></canvas>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
