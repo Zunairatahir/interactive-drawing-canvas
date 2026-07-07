@@ -1,4 +1,4 @@
-# 🎨 Interactive Drawing Application
+# 🎨 Interactive Drawing Canvas
 
 A simple and interactive drawing application built with **HTML5 Canvas**, **CSS3**, and **Vanilla JavaScript**. Users can draw freely using their mouse, change brush colors, and clear the canvas with a single click.
 
@@ -45,21 +45,13 @@ The Interactive Drawing Application demonstrates how to use the **HTML5 Canvas A
 # 📂 Project Structure
 
 ```text
-Canvas-code/
+interactive-drawing-canvas/
 │
-├── index.html          # Main HTML page
-├── style.css           # Styling
-├── script.js           # Drawing functionality
-├── README.md           # Project documentation
-├── LICENSE             # MIT License
-├── .gitignore          # Git ignore rules
-│
-├── assets/
-│   └── screenshots/    # Project screenshots
-│
-└── docs/               # Optional documentation
+├── README.md
+├── index.html
+├── style.css
+└── script.js
 ```
-
 ---
 
 # 🚀 Installation
