@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.toolbar {
+    margin-bottom: 15px;
+}
+
+button,
+input {
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+canvas {
+    border: 2px solid black;
+    background-color: white;
+    cursor: crosshair;
+}
