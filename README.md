@@ -21,13 +21,6 @@ A simple and interactive drawing application built with **HTML5 Canvas**, **CSS3
 
 ---
 
-## Live Demo
-
-Watch the project in action on the live website:
-https://zunairatahir.github.io/interactive-drawing-canvas/
-
----
-
 # Installation
 
 ## Clone the repository
