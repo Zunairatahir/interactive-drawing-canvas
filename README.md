@@ -4,12 +4,6 @@ A simple and interactive drawing application built with **HTML5 Canvas**, **CSS3
 
 ---
 
-# Preview
-
-<img width="400" height="296" alt="canvas" src="https://github.com/user-attachments/assets/c5270444-5797-4836-ac24-3c146a949b77" />
-
----
-
 # Technologies Used
 
 | Technology | Purpose |
